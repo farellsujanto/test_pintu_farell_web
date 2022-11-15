@@ -4,6 +4,7 @@ import { PRICE_CHANGES_KEY, SUPPORTED_CURRENCIES_KEY } from './marketQueryKeys';
 import { PRICE_CHANGES_URL, SUPPORTED_CURRENCIES_URL } from './marketQueryUrls';
 import PriceChanges from '../../models/priceChangesModel';
 import SupportedCurrencies from '../../models/supportedCurrenciesModel';
+import { defaultQueryClient } from '../../configs/queryClient';
 
 export const usePriceChangesQuery = () =>
     useQuery<PriceChanges[]>([PRICE_CHANGES_KEY], () =>
@@ -14,8 +15,26 @@ export const usePriceChangesQuery = () =>
         ),
     );
 
+export const preFetchPriceChangesQuery = () =>
+    defaultQueryClient.prefetchQuery<PriceChanges[]>([PRICE_CHANGES_KEY], () =>
+        fetchApi<any>(
+            PRICE_CHANGES_URL,
+            undefined,
+            'GET',
+        ),
+    );
+
 export const useSupportedCurrenciesQuery = () =>
     useQuery<SupportedCurrencies[]>([SUPPORTED_CURRENCIES_KEY], () =>
+        fetchApi<any>(
+            SUPPORTED_CURRENCIES_URL,
+            undefined,
+            'GET',
+        ),
+    );
+
+export const preFetchSupportedCurrenciesQuery = () =>
+    defaultQueryClient.prefetchQuery<SupportedCurrencies[]>([SUPPORTED_CURRENCIES_KEY], () =>
         fetchApi<any>(
             SUPPORTED_CURRENCIES_URL,
             undefined,

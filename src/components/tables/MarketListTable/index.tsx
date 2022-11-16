@@ -3,6 +3,7 @@ import { MarketChanges } from '../../../models/marketChangesModel';
 import PriceChanges from '../../../models/priceChangesModel';
 import { useSupportedCurrenciesQuery, usePriceChangesQuery } from '../../../queries/marketQuery/marketQueryHooks';
 import MarketListTableMobile from './mobile';
+import MarketListTableDesktop from './desktop';
 
 const MarketListTable = () => {
     const {
@@ -50,7 +51,17 @@ const MarketListTable = () => {
     ]);
 
     return (
-        <MarketListTableMobile marketChangesListData={marketChangesListData} />
+        <>
+            <div className='hidden md:block'>
+                <MarketListTableDesktop marketChangesListData={marketChangesListData} />
+            </div>
+
+            <div className='md:hidden'>
+                <MarketListTableMobile marketChangesListData={marketChangesListData} />
+            </div>
+
+        </>
+
     );
 
 }

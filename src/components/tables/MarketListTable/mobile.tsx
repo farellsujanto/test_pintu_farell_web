@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import SVG from 'react-inlinesvg';
 import { MarketChanges } from '../../../models/marketChangesModel';
 import HomeTimeDropdown from '../../buttons/HomeTimeDropdown';
@@ -61,9 +61,11 @@ const MarketListTableMobile = ({ marketChangesListData }: MarketListTableMobileP
                                         </div>
                                     </td>
                                     <td className='p-4 text-right'>
-                                        <div className=''>
+                                        <div className='float-right'>
                                             <p className='text-base font-semibold text-gray-900'>Rp {Number(marketChange.latestPrice).toLocaleString('id')}</p>
-                                            <ChangesText changes={getChangesValue(marketChange)} />
+                                            <div className='float-right'>
+                                                <ChangesText changes={getChangesValue(marketChange)} />
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>

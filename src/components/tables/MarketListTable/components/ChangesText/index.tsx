@@ -13,13 +13,13 @@ const ChangesText = ({ changes }: ChangesTextProps) => {
     const colorClass = isChangesPositive ? 'text-green-400 fill-green-400' : 'text-red-400 fill-red-400';
 
     return (
-        <div className={`${colorClass} flex flex-row items-center text-right float-right`}>
+        <div className={`${colorClass} text-center inline-flex items-center`}>
             {isChangesPositive ? (
                 <CaretUpIcon />
             ) : (
                 <CaretDownIcon />
             )}
-            <p className='ml-1 text-sm font-semibold'>{Math.abs(changesNumber)} %</p>
+            <p className='ml-1 text-sm md:text-base font-semibold'>{Math.abs(changesNumber)} %</p>
         </div>
     );
 }

@@ -33,7 +33,7 @@ const MarketListTableDesktop = ({ marketChangesListData }: MarketListTableDeskto
 
                                             <div className='ml-6 flex flex-row flex-1 items-center'>
                                                 <p className='text-base font-semibold text-gray-900 flex-1'>{marketChange.name}</p>
-                                                <p className='text-base flex-none text-gray-400'>{marketChange.currencySymbol}</p>
+                                                <p className='text-base flex-none text-gray-400 text-left w-14 mx-6'>{marketChange.currencySymbol}</p>
                                             </div>
                                         </div>
                                     </td>

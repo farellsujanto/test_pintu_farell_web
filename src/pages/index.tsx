@@ -25,7 +25,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className='p-4 md:p-0 flex overflow-auto mb-4 max-w-[1280px] m-auto'>
+            <section className='p-4 md:p-0 flex overflow-auto mb-6 max-w-[1280px] m-auto'>
                 <HomeFilterList />
             </section>
 

@@ -51,4 +51,5 @@ The repo is linked to vercel, so any push commits will be built & served on verc
 1. Using design system & namings
 2. Use faster list generation for larger lists
 3. Shimmer for faster load
+4. Path alias namings (prevent too much `../../../`)
 

@@ -1,4 +1,4 @@
-export interface MarketChanges {
+export default interface MarketChanges {
     name: string;
     currencySymbol: string;
     latestPrice: string;

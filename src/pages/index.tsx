@@ -14,10 +14,10 @@ export default function Home() {
                 <title>Harga Crypto Hari Ini (IDR) | Pintu</title>
             </Head>
 
-            <section className='p-4 md:p-0 mb-8 mt-8 max-w-[1280px] m-auto'>
-                <div className='flex flex-row items-center ju'>
+            <section className='p-4 md:p-0 md:mb-8 mt-8 max-w-[1280px] m-auto'>
+                <div className='flex flex-row items-center'>
                     <div className='flex-1'>
-                        <h1 className='text-xl md:text-2xl font-bold'>Harga Crypto dalam Rupiah Hari Ini</h1>
+                        <h1 className='text-lg md:text-2xl font-bold'>Harga Crypto dalam Rupiah Hari Ini</h1>
                     </div>
                     <div className='flex-none text-right'>
                         <SearchButton />

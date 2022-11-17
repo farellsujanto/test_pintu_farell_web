@@ -11,9 +11,9 @@ const SearchButton = () => {
                 </button>
             </div>
 
-            <div className='md:hidden'>
-                <button className='py-1 px-2'>
-                    <SearchIcon className='w-8 h-8 fill-gray-400' />
+            <div className='md:hidden w-6 h-6'>
+                <button className=''>
+                    <SearchIcon className='w-6 h-6 fill-gray-400' />
                 </button>
             </div>
 

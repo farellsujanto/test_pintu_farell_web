@@ -1,7 +1,7 @@
 import { QueryClientProvider } from '@tanstack/react-query';
 import { render, screen } from '@testing-library/react'
 import { defaultQueryClient } from '../src/configs/queryClient';
-import Home from '../src/pages'
+import Home from '../src/pages';
 
 describe('Home', () => {
     it('Renders correctly without crashing', () => {
@@ -16,5 +16,5 @@ describe('Home', () => {
         });
 
         expect(heading).toBeInTheDocument();
-    })
-})
+    });
+});

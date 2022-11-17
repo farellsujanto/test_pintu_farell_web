@@ -24,7 +24,7 @@ const MarketListTable = () => {
         }
 
         const newMarketChangesListData = supportedCurrencies.map((supportedCurrency) => {
-            const currencyPriceChanges: PriceChanges = priceChanges.find((priceChange) => {
+            const currencyPriceChanges: PriceChanges | undefined = priceChanges.find((priceChange) => {
                 const splittedCurrencyPair = priceChange.pair.split('/');
                 return splittedCurrencyPair[0].toLowerCase() === supportedCurrency.currencySymbol.toLowerCase();
             });

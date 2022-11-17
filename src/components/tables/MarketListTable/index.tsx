@@ -6,20 +6,13 @@ import MarketListTableMobile from './mobile';
 import MarketListTableDesktop from './desktop';
 
 const MarketListTable = () => {
-    const {
-        data: supportedCurrencies,
-        isLoading: isSupportedCurrenciesLoading,
-    } = useSupportedCurrenciesQuery();
+    const { data: supportedCurrencies } = useSupportedCurrenciesQuery();
 
-    const {
-        data: priceChanges,
-        isLoading: isPriceChangesLoading,
-    } = usePriceChangesQuery();
+    const { data: priceChanges } = usePriceChangesQuery();
 
     const marketChangesListData: MarketChanges[] = useMemo(() => {
-        const isDataStillLoading = isSupportedCurrenciesLoading || isPriceChangesLoading;
         const isDataEmpty = !supportedCurrencies || !priceChanges;
-        if (isDataStillLoading || isDataEmpty) {
+        if (isDataEmpty) {
             return [];
         }
 
@@ -45,9 +38,7 @@ const MarketListTable = () => {
         return newMarketChangesListData;
     }, [
         supportedCurrencies,
-        isSupportedCurrenciesLoading,
         priceChanges,
-        isPriceChangesLoading,
     ]);
 
     return (

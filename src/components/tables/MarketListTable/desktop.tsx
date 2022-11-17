@@ -26,7 +26,7 @@ const MarketListTableDesktop = ({ marketChangesListData }: MarketListTableDeskto
                     <>
                         {marketChangesListData.map((marketChange) => {
                             return (
-                                <tr>
+                                <tr key={`desktop-market-list-${marketChange.currencySymbol}`}>
                                     <td className='p-5'>
                                         <div className='flex flex-row'>
                                             <SVG src={marketChange.logo} color={marketChange.color} className='w-8 h-8 self-center' />

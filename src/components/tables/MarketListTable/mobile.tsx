@@ -28,7 +28,7 @@ const MarketListTableMobile = ({ marketChangesListData }: MarketListTableMobileP
             default:
                 return '';
         }
-    }, [dayFilter, marketChangesListData]);
+    }, [dayFilter]);
 
     return (
         <div className='border min-w-full divide-gray-200'>
@@ -49,7 +49,7 @@ const MarketListTableMobile = ({ marketChangesListData }: MarketListTableMobileP
                     <>
                         {marketChangesListData.map((marketChange) => {
                             return (
-                                <tr>
+                                <tr key={`mobile-market-list-${marketChange.currencySymbol}`}>
                                     <td className='p-4'>
                                         <div className='flex flex-row'>
                                             <SVG src={marketChange.logo} color={marketChange.color} className='w-8 h-8 self-center' />

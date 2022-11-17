@@ -58,7 +58,9 @@ const HomeFilterList = () => {
         <>
             {SHOWN_FILTERS.map((filter) => {
                 return (
-                    <button className=' py-2 px-2 text-center inline-flex items-center rounded-lg text-blue-600 mr-2 bg-blue-100 '>
+                    <button
+                        key={filter.label}
+                        className=' py-2 px-2 text-center inline-flex items-center rounded-lg text-blue-600 mr-2 bg-blue-100 ' >
                         <div className='w-6 h-6 mr-2'>
                             <filter.Icon />
                         </div>

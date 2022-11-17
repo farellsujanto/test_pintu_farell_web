@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import SVG from 'react-inlinesvg';
-import { MarketChanges } from '../../../models/marketChangesModel';
+import MarketChanges from '../../../models/marketChangesModel';
 import HomeTimeDropdown from '../../buttons/HomeTimeDropdown';
 import ChangesText from './components/ChangesText';
 

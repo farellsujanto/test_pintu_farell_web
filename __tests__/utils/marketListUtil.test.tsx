@@ -27,7 +27,7 @@ const dummyPriceChanges1 = [{
     latestPrice: '5',
 }];
 
-describe("Test getMarketChangesListData() output", () => {
+describe('Test getMarketChangesListData() output', () => {
     test('Should result in correct output', () => {
         expect(getMarketChangesListData(dummySupportedCurrencies1, dummyPriceChanges1))
             .toStrictEqual<MarketChanges[]>([{

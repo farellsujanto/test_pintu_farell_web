@@ -1,6 +1,6 @@
-import MarketChanges from "../models/marketChangesModel";
-import PriceChanges from "../models/priceChangesModel";
-import SupportedCurrencies from "../models/supportedCurrenciesModel";
+import MarketChanges from '../models/marketChangesModel';
+import PriceChanges from '../models/priceChangesModel';
+import SupportedCurrencies from '../models/supportedCurrenciesModel';
 
 export function getMarketChangesListData(supportedCurrencies: SupportedCurrencies[], priceChanges: PriceChanges[]): MarketChanges[] {
     const newMarketChangesListData = supportedCurrencies.map((supportedCurrency) => {

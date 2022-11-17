@@ -25,6 +25,7 @@ The repo is linked to vercel, so any push commits will be built & served on verc
 5. Using memo, useMemo, useCallback as standart for performance
 6. Using hooks for state management
 7. Using `getServerSideProps` for intial fetching data 
+8. Mobile friendly design based on https://pintu.co.id/market
 
 
 ## Tradeoffs
